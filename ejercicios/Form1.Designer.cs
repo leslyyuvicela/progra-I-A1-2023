@@ -29,45 +29,127 @@ namespace ejercicios
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtEdad = new System.Windows.Forms.TextBox();
-            this.lblEdad = new System.Windows.Forms.Label();
-            this.btnComprobar = new System.Windows.Forms.Button();
+            this.lblDeConversores = new System.Windows.Forms.Label();
+            this.cboDeConversores = new System.Windows.Forms.ComboBox();
+            this.cboAConversores = new System.Windows.Forms.ComboBox();
+            this.lblAConversores = new System.Windows.Forms.Label();
+            this.btnConvertirConversores = new System.Windows.Forms.Button();
+            this.lblRespuestaConversores = new System.Windows.Forms.Label();
+            this.lblCantidadConversores = new System.Windows.Forms.Label();
+            this.txtCantidadConversores = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // txtEdad
+            // lblDeConversores
             // 
-            this.txtEdad.Location = new System.Drawing.Point(129, 54);
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(100, 20);
-            this.txtEdad.TabIndex = 0;
+            this.lblDeConversores.AutoSize = true;
+            this.lblDeConversores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeConversores.Location = new System.Drawing.Point(94, 47);
+            this.lblDeConversores.Name = "lblDeConversores";
+            this.lblDeConversores.Size = new System.Drawing.Size(33, 16);
+            this.lblDeConversores.TabIndex = 0;
+            this.lblDeConversores.Text = "DE:";
             // 
-            // lblEdad
+            // cboDeConversores
             // 
-            this.lblEdad.AutoSize = true;
-            this.lblEdad.Location = new System.Drawing.Point(88, 57);
-            this.lblEdad.Name = "lblEdad";
-            this.lblEdad.Size = new System.Drawing.Size(35, 13);
-            this.lblEdad.TabIndex = 1;
-            this.lblEdad.Text = "Edad:";
+            this.cboDeConversores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDeConversores.FormattingEnabled = true;
+            this.cboDeConversores.Items.AddRange(new object[] {
+            "Dolar",
+            "Euro",
+            "Quetzales",
+            "Lempiras",
+            "Colon SV",
+            "Cordoba",
+            "Pesos CR",
+            "Yen ",
+            "Libras esterlina",
+            "Rupia india"});
+            this.cboDeConversores.Location = new System.Drawing.Point(133, 46);
+            this.cboDeConversores.Name = "cboDeConversores";
+            this.cboDeConversores.Size = new System.Drawing.Size(141, 21);
+            this.cboDeConversores.TabIndex = 1;
             // 
-            // btnComprobar
+            // cboAConversores
             // 
-            this.btnComprobar.Location = new System.Drawing.Point(109, 106);
-            this.btnComprobar.Name = "btnComprobar";
-            this.btnComprobar.Size = new System.Drawing.Size(75, 23);
-            this.btnComprobar.TabIndex = 2;
-            this.btnComprobar.Text = "Comprobar";
-            this.btnComprobar.UseVisualStyleBackColor = true;
-            this.btnComprobar.Click += new System.EventHandler(this.btnComprobar_Click);
+            this.cboAConversores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAConversores.FormattingEnabled = true;
+            this.cboAConversores.Items.AddRange(new object[] {
+            "Dolar",
+            "Euro",
+            "Quetzales",
+            "Lempiras",
+            "Colon SV",
+            "Cordoba",
+            "Pesos CR",
+            "Yen ",
+            "Libras esterlina",
+            "Rupia india"});
+            this.cboAConversores.Location = new System.Drawing.Point(133, 101);
+            this.cboAConversores.Name = "cboAConversores";
+            this.cboAConversores.Size = new System.Drawing.Size(141, 21);
+            this.cboAConversores.TabIndex = 3;
+            // 
+            // lblAConversores
+            // 
+            this.lblAConversores.AutoSize = true;
+            this.lblAConversores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAConversores.Location = new System.Drawing.Point(94, 106);
+            this.lblAConversores.Name = "lblAConversores";
+            this.lblAConversores.Size = new System.Drawing.Size(22, 16);
+            this.lblAConversores.TabIndex = 2;
+            this.lblAConversores.Text = "A:";
+            // 
+            // btnConvertirConversores
+            // 
+            this.btnConvertirConversores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConvertirConversores.Location = new System.Drawing.Point(97, 233);
+            this.btnConvertirConversores.Name = "btnConvertirConversores";
+            this.btnConvertirConversores.Size = new System.Drawing.Size(177, 33);
+            this.btnConvertirConversores.TabIndex = 4;
+            this.btnConvertirConversores.Text = "Convertir";
+            this.btnConvertirConversores.UseVisualStyleBackColor = true;
+            this.btnConvertirConversores.Click += new System.EventHandler(this.btnConvertirConversores_Click);
+            // 
+            // lblRespuestaConversores
+            // 
+            this.lblRespuestaConversores.AutoSize = true;
+            this.lblRespuestaConversores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRespuestaConversores.Location = new System.Drawing.Point(94, 202);
+            this.lblRespuestaConversores.Name = "lblRespuestaConversores";
+            this.lblRespuestaConversores.Size = new System.Drawing.Size(99, 16);
+            this.lblRespuestaConversores.TabIndex = 5;
+            this.lblRespuestaConversores.Text = "Respuesta: ?";
+            // 
+            // lblCantidadConversores
+            // 
+            this.lblCantidadConversores.AutoSize = true;
+            this.lblCantidadConversores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadConversores.Location = new System.Drawing.Point(94, 153);
+            this.lblCantidadConversores.Name = "lblCantidadConversores";
+            this.lblCantidadConversores.Size = new System.Drawing.Size(74, 16);
+            this.lblCantidadConversores.TabIndex = 6;
+            this.lblCantidadConversores.Text = "Cantidad:";
+            // 
+            // txtCantidadConversores
+            // 
+            this.txtCantidadConversores.Location = new System.Drawing.Point(174, 153);
+            this.txtCantidadConversores.Name = "txtCantidadConversores";
+            this.txtCantidadConversores.Size = new System.Drawing.Size(100, 20);
+            this.txtCantidadConversores.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(323, 169);
-            this.Controls.Add(this.btnComprobar);
-            this.Controls.Add(this.lblEdad);
-            this.Controls.Add(this.txtEdad);
+            this.ClientSize = new System.Drawing.Size(370, 325);
+            this.Controls.Add(this.txtCantidadConversores);
+            this.Controls.Add(this.lblCantidadConversores);
+            this.Controls.Add(this.lblRespuestaConversores);
+            this.Controls.Add(this.btnConvertirConversores);
+            this.Controls.Add(this.cboAConversores);
+            this.Controls.Add(this.lblAConversores);
+            this.Controls.Add(this.cboDeConversores);
+            this.Controls.Add(this.lblDeConversores);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -77,9 +159,14 @@ namespace ejercicios
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtEdad;
-        private System.Windows.Forms.Label lblEdad;
-        private System.Windows.Forms.Button btnComprobar;
+        private System.Windows.Forms.Label lblDeConversores;
+        private System.Windows.Forms.ComboBox cboDeConversores;
+        private System.Windows.Forms.ComboBox cboAConversores;
+        private System.Windows.Forms.Label lblAConversores;
+        private System.Windows.Forms.Button btnConvertirConversores;
+        private System.Windows.Forms.Label lblRespuestaConversores;
+        private System.Windows.Forms.Label lblCantidadConversores;
+        private System.Windows.Forms.TextBox txtCantidadConversores;
     }
 }
 
