@@ -8,3 +8,13 @@ C:\Users\Estudiante\source\repos\progra-I-A1-2023\ejercicios\bin\Debug\ejercicio
 C:\Users\Estudiante\source\repos\progra-I-A1-2023\ejercicios\bin\Debug\ejercicios.pdb
 C:\Users\Estudiante\source\repos\progra-I-A1-2023\ejercicios\obj\Debug\ejercicios.exe
 C:\Users\Estudiante\source\repos\progra-I-A1-2023\ejercicios\obj\Debug\ejercicios.pdb
+C:\Users\mined\source\repos\progra-I-A1-2023\ejercicios\bin\Debug\ejercicios.exe.config
+C:\Users\mined\source\repos\progra-I-A1-2023\ejercicios\bin\Debug\ejercicios.exe
+C:\Users\mined\source\repos\progra-I-A1-2023\ejercicios\bin\Debug\ejercicios.pdb
+C:\Users\mined\source\repos\progra-I-A1-2023\ejercicios\obj\Debug\ejercicios.csproj.AssemblyReference.cache
+C:\Users\mined\source\repos\progra-I-A1-2023\ejercicios\obj\Debug\ejercicios.Form1.resources
+C:\Users\mined\source\repos\progra-I-A1-2023\ejercicios\obj\Debug\ejercicios.Properties.Resources.resources
+C:\Users\mined\source\repos\progra-I-A1-2023\ejercicios\obj\Debug\ejercicios.csproj.GenerateResource.cache
+C:\Users\mined\source\repos\progra-I-A1-2023\ejercicios\obj\Debug\ejercicios.csproj.CoreCompileInputs.cache
+C:\Users\mined\source\repos\progra-I-A1-2023\ejercicios\obj\Debug\ejercicios.exe
+C:\Users\mined\source\repos\progra-I-A1-2023\ejercicios\obj\Debug\ejercicios.pdb

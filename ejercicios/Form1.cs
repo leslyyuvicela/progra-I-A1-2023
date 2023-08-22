@@ -11,7 +11,17 @@ using System.Windows.Forms;
 namespace ejercicios
 {
     public partial class Form1 : Form
+       
     {
+        string[,] tiposConversores = new string[,] {
+            {"Dolar", "Euro", "Quetzal", "Lempira", "Colon SV", "Cordoba", "Pesos CR", "Yenes", "Libras Esterlinas", "Rupia india"}, //Monedas
+            {"Kilogramo", "Gramo", "Decigramo", "Miligramo", "Nanogramo", "Picogramo", "Tonelada corta", "Quintal estadounidense", "Libra", "Onza"}, //Masa
+            {"Litro", "Kilolitro", "Megalitro", "Nanolitro", "Milímetro cúbico", "Centímetro cúbico", "Metro cúbico", "Taza estadounidense", "Galón Imperial", "Pie cúbico"}, //Volumen
+            {"Kilómetro", "Metro", "Micrón", "Gigámetro", "Terámetro", "Megámetro", "Milla", "Yarda", "Pie", "Año luz"}, //Longitud
+            {"Byte", "Kilobyte", "Megabyte", "Gigabyte", "Terabyte", "Petabyte", "Exabyte", "Zettabyte", "Yottabyte", "Bit"}, //Almacenamiento
+            {"Segundo", "Minuto", "Hora", "Día", "Semana", "Quincena", "Mes", "Año", "Siglo", "Milenio"}//Tiempo
+
+        }; //Matriz multidimencional
         public Form1()
         {
             InitializeComponent();

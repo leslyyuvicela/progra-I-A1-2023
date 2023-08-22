@@ -37,13 +37,15 @@ namespace ejercicios
             this.lblRespuestaConversores = new System.Windows.Forms.Label();
             this.lblCantidadConversores = new System.Windows.Forms.Label();
             this.txtCantidadConversores = new System.Windows.Forms.TextBox();
+            this.cboTipoConversor = new System.Windows.Forms.ComboBox();
+            this.lblTipoConversor = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblDeConversores
             // 
             this.lblDeConversores.AutoSize = true;
             this.lblDeConversores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeConversores.Location = new System.Drawing.Point(94, 47);
+            this.lblDeConversores.Location = new System.Drawing.Point(225, 150);
             this.lblDeConversores.Name = "lblDeConversores";
             this.lblDeConversores.Size = new System.Drawing.Size(33, 16);
             this.lblDeConversores.TabIndex = 0;
@@ -53,18 +55,7 @@ namespace ejercicios
             // 
             this.cboDeConversores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDeConversores.FormattingEnabled = true;
-            this.cboDeConversores.Items.AddRange(new object[] {
-            "Dolar",
-            "Euro",
-            "Quetzales",
-            "Lempiras",
-            "Colon SV",
-            "Cordoba",
-            "Pesos CR",
-            "Yen ",
-            "Libras esterlina",
-            "Rupia india"});
-            this.cboDeConversores.Location = new System.Drawing.Point(133, 46);
+            this.cboDeConversores.Location = new System.Drawing.Point(274, 149);
             this.cboDeConversores.Name = "cboDeConversores";
             this.cboDeConversores.Size = new System.Drawing.Size(141, 21);
             this.cboDeConversores.TabIndex = 1;
@@ -73,18 +64,7 @@ namespace ejercicios
             // 
             this.cboAConversores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboAConversores.FormattingEnabled = true;
-            this.cboAConversores.Items.AddRange(new object[] {
-            "Dolar",
-            "Euro",
-            "Quetzales",
-            "Lempiras",
-            "Colon SV",
-            "Cordoba",
-            "Pesos CR",
-            "Yen ",
-            "Libras esterlina",
-            "Rupia india"});
-            this.cboAConversores.Location = new System.Drawing.Point(133, 101);
+            this.cboAConversores.Location = new System.Drawing.Point(274, 204);
             this.cboAConversores.Name = "cboAConversores";
             this.cboAConversores.Size = new System.Drawing.Size(141, 21);
             this.cboAConversores.TabIndex = 3;
@@ -93,7 +73,7 @@ namespace ejercicios
             // 
             this.lblAConversores.AutoSize = true;
             this.lblAConversores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAConversores.Location = new System.Drawing.Point(94, 106);
+            this.lblAConversores.Location = new System.Drawing.Point(225, 209);
             this.lblAConversores.Name = "lblAConversores";
             this.lblAConversores.Size = new System.Drawing.Size(22, 16);
             this.lblAConversores.TabIndex = 2;
@@ -102,7 +82,7 @@ namespace ejercicios
             // btnConvertirConversores
             // 
             this.btnConvertirConversores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConvertirConversores.Location = new System.Drawing.Point(97, 233);
+            this.btnConvertirConversores.Location = new System.Drawing.Point(228, 336);
             this.btnConvertirConversores.Name = "btnConvertirConversores";
             this.btnConvertirConversores.Size = new System.Drawing.Size(177, 33);
             this.btnConvertirConversores.TabIndex = 4;
@@ -114,7 +94,7 @@ namespace ejercicios
             // 
             this.lblRespuestaConversores.AutoSize = true;
             this.lblRespuestaConversores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRespuestaConversores.Location = new System.Drawing.Point(94, 202);
+            this.lblRespuestaConversores.Location = new System.Drawing.Point(225, 305);
             this.lblRespuestaConversores.Name = "lblRespuestaConversores";
             this.lblRespuestaConversores.Size = new System.Drawing.Size(99, 16);
             this.lblRespuestaConversores.TabIndex = 5;
@@ -124,7 +104,7 @@ namespace ejercicios
             // 
             this.lblCantidadConversores.AutoSize = true;
             this.lblCantidadConversores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadConversores.Location = new System.Drawing.Point(94, 153);
+            this.lblCantidadConversores.Location = new System.Drawing.Point(225, 256);
             this.lblCantidadConversores.Name = "lblCantidadConversores";
             this.lblCantidadConversores.Size = new System.Drawing.Size(74, 16);
             this.lblCantidadConversores.TabIndex = 6;
@@ -132,16 +112,44 @@ namespace ejercicios
             // 
             // txtCantidadConversores
             // 
-            this.txtCantidadConversores.Location = new System.Drawing.Point(174, 153);
+            this.txtCantidadConversores.Location = new System.Drawing.Point(305, 256);
             this.txtCantidadConversores.Name = "txtCantidadConversores";
             this.txtCantidadConversores.Size = new System.Drawing.Size(100, 20);
             this.txtCantidadConversores.TabIndex = 7;
+            // 
+            // cboTipoConversor
+            // 
+            this.cboTipoConversor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipoConversor.FormattingEnabled = true;
+            this.cboTipoConversor.Items.AddRange(new object[] {
+            "Moneda",
+            "Masa",
+            "Volumen",
+            "Longitud",
+            "Almacenamiento",
+            "Tiempo"});
+            this.cboTipoConversor.Location = new System.Drawing.Point(274, 111);
+            this.cboTipoConversor.Name = "cboTipoConversor";
+            this.cboTipoConversor.Size = new System.Drawing.Size(141, 21);
+            this.cboTipoConversor.TabIndex = 9;
+            // 
+            // lblTipoConversor
+            // 
+            this.lblTipoConversor.AutoSize = true;
+            this.lblTipoConversor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoConversor.Location = new System.Drawing.Point(225, 116);
+            this.lblTipoConversor.Name = "lblTipoConversor";
+            this.lblTipoConversor.Size = new System.Drawing.Size(43, 16);
+            this.lblTipoConversor.TabIndex = 8;
+            this.lblTipoConversor.Text = "TIPO";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(370, 325);
+            this.ClientSize = new System.Drawing.Size(656, 481);
+            this.Controls.Add(this.cboTipoConversor);
+            this.Controls.Add(this.lblTipoConversor);
             this.Controls.Add(this.txtCantidadConversores);
             this.Controls.Add(this.lblCantidadConversores);
             this.Controls.Add(this.lblRespuestaConversores);
@@ -167,6 +175,8 @@ namespace ejercicios
         private System.Windows.Forms.Label lblRespuestaConversores;
         private System.Windows.Forms.Label lblCantidadConversores;
         private System.Windows.Forms.TextBox txtCantidadConversores;
+        private System.Windows.Forms.ComboBox cboTipoConversor;
+        private System.Windows.Forms.Label lblTipoConversor;
     }
 }
 
