@@ -127,7 +127,8 @@ namespace ejercicios
             "Volumen",
             "Longitud",
             "Almacenamiento",
-            "Tiempo"});
+            "Tiempo",
+            "Area"});
             this.cboTipoConversor.Location = new System.Drawing.Point(280, 115);
             this.cboTipoConversor.Name = "cboTipoConversor";
             this.cboTipoConversor.Size = new System.Drawing.Size(141, 21);
