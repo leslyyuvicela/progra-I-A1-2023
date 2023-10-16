@@ -29,6 +29,7 @@ namespace ejercicios
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtBuscarAlumnos = new System.Windows.Forms.TextBox();
             this.cboBuscarAlumnos = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,10 +58,12 @@ namespace ejercicios
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.erpAlumnos = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbrEdicionAlumnos.SuspendLayout();
             this.grbNavegacionAlumnos.SuspendLayout();
             this.grbDatosAlumno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatosAlumno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpAlumnos)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBuscarAlumnos
@@ -342,6 +345,10 @@ namespace ejercicios
             this.telefono.Name = "telefono";
             this.telefono.ReadOnly = true;
             // 
+            // erpAlumnos
+            // 
+            this.erpAlumnos.ContainerControl = this;
+            // 
             // Alumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,6 +370,7 @@ namespace ejercicios
             this.grbDatosAlumno.ResumeLayout(false);
             this.grbDatosAlumno.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatosAlumno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpAlumnos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,5 +406,6 @@ namespace ejercicios
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
+        private System.Windows.Forms.ErrorProvider erpAlumnos;
     }
 }

@@ -50,11 +50,11 @@ namespace ejercicios
                 bs.DataSource = grdDatosAlumno.DataSource;
                 bs.Filter = opcion == 0 ? "codigo=" + valor : "nombre like '%" + valor + "%'";
                 grdDatosAlumno.DataSource = bs;
-                //erpAlumnos.SetError(txtBuscarAlumnos, "");
+                erpAlumnos.SetError(txtBuscarAlumnos, "");
             }
             catch (Exception e)
             {
-                //erpAlumnos.SetError(txtBuscarAlumnos, "Por favor ingrese un codigo o Alumno a buscr");
+                erpAlumnos.SetError(txtBuscarAlumnos, "Por favor ingrese un codigo o Alumno a buscr");
             }
         }
         private void mostrarDatosAlumno()
