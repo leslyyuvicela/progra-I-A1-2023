@@ -12,11 +12,21 @@ namespace ejercicios
 {
     public partial class Principal : Form
     {
+        public Principal()
+        {
+            InitializeComponent();
+        }
+
         private void materiasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Materias objMaterias = new Materias();
             objMaterias.MdiParent = this;
-            objMaterias.Show();
+            objMaterias.Show(); 
+        }
+
+        private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

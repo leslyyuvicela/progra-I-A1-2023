@@ -279,7 +279,7 @@ namespace ejercicios
             this.btnNuevoMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoMateria.Location = new System.Drawing.Point(11, 69);
             this.btnNuevoMateria.Name = "btnNuevoMateria";
-            this.btnNuevoMateria.Size = new System.Drawing.Size(70, 23);
+            this.btnNuevoMateria.Size = new System.Drawing.Size(83, 23);
             this.btnNuevoMateria.TabIndex = 0;
             this.btnNuevoMateria.Text = "Nuevo";
             this.btnNuevoMateria.UseVisualStyleBackColor = true;
@@ -300,8 +300,8 @@ namespace ejercicios
             this.cboBuscarMaterias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBuscarMaterias.FormattingEnabled = true;
             this.cboBuscarMaterias.Items.AddRange(new object[] {
-            "Nombre",
-            "Código"});
+            "Código",
+            "Nombre"});
             this.cboBuscarMaterias.Location = new System.Drawing.Point(628, 64);
             this.cboBuscarMaterias.Name = "cboBuscarMaterias";
             this.cboBuscarMaterias.Size = new System.Drawing.Size(121, 21);
