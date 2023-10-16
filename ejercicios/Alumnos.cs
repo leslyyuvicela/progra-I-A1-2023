@@ -24,21 +24,22 @@ namespace ejercicios
 
         private void Alumnos_Load(object sender, EventArgs e)
         {
+            
             actualizarDsAlumnos();
             cboBuscarAlumnos.SelectedIndex = 1;
+           
         }
         private void actualizarDsAlumnos()
         {
             miDs.Clear();
             miDs = objConexion.obtenerDatos();
-            miTabla = miDs.Tables["Alumnos"];
+            miTabla = miDs.Tables["alumnos"];
             miTabla.PrimaryKey = new DataColumn[] { miTabla.Columns["idAlumno"] };
             mostrarAlumnos();
             mostrarDatosAlumno();
         }
         private void mostrarAlumnos()
         {
-
             grdDatosAlumno.DataSource = miTabla.DefaultView;
         }
         private void filtrarAlumnos(String valor, int opcion)
@@ -47,7 +48,7 @@ namespace ejercicios
             {
                 BindingSource bs = new BindingSource();
                 bs.DataSource = grdDatosAlumno.DataSource;
-                bs.Filter = opcion == 0 ? "codigo=" + valor : "Alumno like '%" + valor + "%'";
+                bs.Filter = opcion == 0 ? "codigo=" + valor : "nombre like '%" + valor + "%'";
                 grdDatosAlumno.DataSource = bs;
                 //erpAlumnos.SetError(txtBuscarAlumnos, "");
             }
@@ -125,11 +126,11 @@ namespace ejercicios
             else
             {//Guardar
                 //Cambia de un formulario a otro
-                String[] Alumnos = new string[] {
+                String[] alumnos = new string[] {
                     accion,txtCodigoAlumno.Text, txtNombreAlumno.Text, txtDireccionAlumnos.Text, txtTelefonoAlumno.Text,
                     miTabla.Rows[posicion].ItemArray[0].ToString()
                 };
-                String msg = objConexion.mantenimientoAlumnos(Alumnos);
+                String msg = objConexion.mantenimientoAlumnos(alumnos);
                 if (msg != "1")
                 {
                     MessageBox.Show("Error en el registro de Alumnos: " + msg, "Registro de Alumnos.", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -225,5 +226,6 @@ namespace ejercicios
             }
         }
 
+        
     }
 }

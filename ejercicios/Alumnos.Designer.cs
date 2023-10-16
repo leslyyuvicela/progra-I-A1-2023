@@ -356,6 +356,7 @@ namespace ejercicios
             this.Controls.Add(this.grdDatosAlumno);
             this.Name = "Alumnos";
             this.Text = "Alumnos";
+            this.Load += new System.EventHandler(this.Alumnos_Load);
             this.gbrEdicionAlumnos.ResumeLayout(false);
             this.grbNavegacionAlumnos.ResumeLayout(false);
             this.grbNavegacionAlumnos.PerformLayout();
