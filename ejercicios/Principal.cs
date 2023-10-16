@@ -22,11 +22,19 @@ namespace ejercicios
             Materias objMaterias = new Materias();
             objMaterias.MdiParent = this;
             objMaterias.Show(); 
+
         }
 
         private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void alumnosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Alumnos objAlumnos = new Alumnos();
+            objAlumnos.MdiParent = this;
+            objAlumnos.Show();
         }
     }
 }
