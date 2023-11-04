@@ -34,25 +34,41 @@ namespace ejercicios
             miAdaptador.SelectCommand = miComando;
             miAdaptador.Fill(miDs, "alumnos");
 
+            miComando.CommandText = "select * from usuarios";
+            miAdaptador.SelectCommand = miComando;
+            miAdaptador.Fill(miDs, "usuarios");
+
             return miDs;
+        }
+        private void parametrizacion()
+        {
+            miComando.Parameters.Add("@id", SqlDbType.Int).Value = 0;
+            miComando.Parameters.Add("@cod", SqlDbType.Char).Value = "";
+            miComando.Parameters.Add("@nom", SqlDbType.Char).Value = "";
+            miComando.Parameters.Add("@dir", SqlDbType.Char).Value = "";
+            miComando.Parameters.Add("@tel", SqlDbType.Char).Value = "";
+            miComando.Parameters.Add("@uv", SqlDbType.Int).Value = 0;
+
         }
         public String mantenimientoMaterias(String[] materias)
         {
             String sql = "";
             if (materias[0] == "nuevo")
             {
-                sql = "INSERT INTO materias (codigo, materia, uv) VALUES('" + materias[1] + "', '" + materias[2] + "', '" +
-                    materias[3] + "')";
+                sql = "INSERT INTO materias (codigo, materia, uv) VALUES(@cod, @nom, @uv)";
             }
             else if (materias[0] == "modificar")
             {
-                sql = "UPDATE materias SET codigo='" + materias[1] + "', materia='" + materias[2] + "', uv='" + materias[3] +
-                    "' WHERE idMateria='" + materias[4] + "'";
+                sql = "UPDATE materias SET codigo= @cod, materia= @nom, uv= @uv  WHERE idMateria= @id";
             }
             else if (materias[0] == "eliminar")
             {
-                sql = "DELETE FROM materias WHERE idMateria='" + materias[4] + "'";
+                sql = "DELETE FROM materias WHERE idMateria=@id";
             }
+            miComando.Parameters["@id"].Value = materias[4];
+            miComando.Parameters["@cod"].Value = materias[1];
+            miComando.Parameters["@nom"].Value = materias[2];
+            miComando.Parameters["@uv"].Value = materias[3];
             return ejecutarSql(sql);
         }
         public String mantenimientoAlumnos(String[] alumnos)
@@ -60,22 +76,38 @@ namespace ejercicios
             String sql = "";
             if (alumnos[0] == "nuevo")
             {
-                sql = "INSERT INTO alumnos (codigo, nombre, direccion, telefono) VALUES('" + alumnos[1] + "', '" + alumnos[2] + "', '" +
-                    alumnos[3] +  "', '"+ alumnos[4]+ "')";
+                sql = "INSERT INTO alumnos (codigo, nombre, direccion, telefono) VALUES(@cod, @nom, @dir, @tel)";
             }
             else if (alumnos[0] == "modificar")
             {
-                sql = "UPDATE alumnos SET codigo='" + alumnos[1] + "', nombre='" + alumnos[2] + "', direccion='" + alumnos[3] + "', telefono='"+
-                 alumnos[4]+   "' WHERE idAlumno='" + alumnos[5] + "'";
+                sql = "UPDATE alumnos SET codigo= @cod, nombre= @nom, direccion= @dir, telefono= @tel WHERE idAlumno= @id";
             }
             else if (alumnos[0] == "eliminar")
             {
-                sql = "DELETE FROM alumnos WHERE idAlumno='" + alumnos[5] + "'";
+                sql = "DELETE FROM alumnos WHERE idAlumno= @id";
             }
             return ejecutarSql(sql);
         }
-
-        private string ejecutarSql(String sql)
+        public String mantenimiento_usuarios(String[] usuarios)
+        {
+            String sql = "";
+            if (usuarios[0] == "nuevo")
+            {
+                sql = "INSERT INTO usuarios (usuario, clave, nombre, direccion, telefono) VALUES('" + usuarios[1] + "', '" + usuarios[2] + "', '" +
+                    usuarios[3] + "', '" + usuarios[4] + "','" + usuarios[5] + "')";
+            }
+            else if (usuarios[0] == "modificar")
+            {
+                sql = "UPDATE usuarios SET usuario='" + usuarios[1] + "', clave='" + usuarios[2] + "', nombre='" + usuarios[3] + "', direccion='" +
+                 usuarios[4] + "', telefono='" + usuarios[5] + "' WHERE idUsuario='" + usuarios[6] + "'";
+            }
+            else if (usuarios[0] == "eliminar")
+            {
+                sql = "DELETE FROM usuarios WHERE idUsuario='" + usuarios[6] + "'";
+            }
+            return ejecutarSql(sql);
+        }
+            private string ejecutarSql(String sql)
         {
             try
             {
@@ -90,4 +122,4 @@ namespace ejercicios
         }
 
     }
-}
+}//.nghp

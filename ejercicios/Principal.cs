@@ -36,5 +36,12 @@ namespace ejercicios
             objAlumnos.MdiParent = this;
             objAlumnos.Show();
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_usuario objUsuarios = new frm_usuario();
+            objUsuarios.MdiParent = this;
+            objUsuarios.Show();
+        }
     }
 }
